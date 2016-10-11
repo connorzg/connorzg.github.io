@@ -1,0 +1,46 @@
+{
+  "name": "shine",
+  "title": "shine.js",
+  "version": "0.2.8",
+  "authors": [
+    "Benjamin Bojko <benjaminbojko.com>"
+  ],
+  "copyright": "Big Spaceship",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "description": "Cast realistic shadows from your HTML elements",
+  "main": "dist/shine.min.js",
+  "moduleType": [
+    "global"
+  ],
+  "keywords": [
+    "lighting",
+    "shadows",
+    "text-shadow",
+    "shadow",
+    "light",
+    "effect",
+    "shading"
+  ],
+  "homepage": "http://bigspaceship.github.io/shine.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.2.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.8",
+    "commit": "9c595ec04685f8fd389936c862e1c112aeaf90e5"
+  },
+  "_source": "https://github.com/bigspaceship/shine.js.git",
+  "_target": "^0.2.8",
+  "_originalSource": "shine",
+  "_direct": true
+}

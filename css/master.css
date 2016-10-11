@@ -22,7 +22,7 @@ p {
   background-color: #69A4D2;
   color: #ffffff;
   position: relative;
-  border-bottom: solid white 3px;
+  border-bottom: solid white 2.5px;
 }
 
 .bg-2 {
@@ -33,6 +33,7 @@ p {
 
 .bg-3 {
   background-color: #ffffff;
+  padding: 80px 10%;
   /* White */
   color: #555555;
 }
@@ -54,7 +55,7 @@ p {
   width: 150px;
   height: 150px;
   margin: 0 auto;
-  border: solid white 3px;
+  border: solid white 2.5px;
 }
 
 .bg-4 {
@@ -110,7 +111,7 @@ p {
 }
 
 #title {
-  font-size: 110px;
+  font-size: 90px;
   font-weight: 900;
 }
 
