@@ -21,7 +21,7 @@ $(document).ready(function() {
       hasScrolled();
       didScroll = false;
     }
-  }, 250);
+  }, 1000);
 
   function hasScrolled() {
     var st = $(this).scrollTop();
@@ -44,4 +44,21 @@ $(document).ready(function() {
 
     lastScrollTop = st;
   }
+
+  // Scroll to My Work
+  $("#work").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(".bg-4").offset().top
+    }, 600);
+  });
+
+  // Scroll to top
+  $(".navbar-brand").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(".bg-1").offset().top
+    }, 600);
+  });
+
 });
