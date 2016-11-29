@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $('.board').on('mousedown', 'td', playerClicked);
+
   var shine = new Shine(document.getElementById('title'));
   window.addEventListener('mousemove', function(event) {
     shine.light.position.x = event.clientX;
@@ -21,7 +23,7 @@ $(document).ready(function() {
       hasScrolled();
       didScroll = false;
     }
-  }, 1000);
+  });
 
   function hasScrolled() {
     var st = $(this).scrollTop();
@@ -62,3 +64,49 @@ $(document).ready(function() {
   });
 
 });
+
+// TIC TAC TOE
+player = 0;
+
+function playerClicked(e) {
+  e.preventDefault();
+  $('.winner').slideUp();
+  if ($(this).hasClass('x')) {} else if ($(this).hasClass('o')) {} else if (player === 0) {
+    $(this).addClass('x');
+    isWinner();
+    player = 1;
+  } else if (player === 1) {
+    $(this).addClass('o');
+    isWinner();
+    player = 0;
+  }
+}
+function oWin() {
+  setTimeout(resetBoard, 1000);
+  $('.winner').text('Player 2 Wins!').slideDown();
+}
+function xWin() {
+  setTimeout(resetBoard, 1000);
+  $('.winner').text('Player 1 Wins!').slideDown();
+}
+function resetBoard() {
+  $('.board').find('td').removeClass('x o');
+}
+function isWinner() {
+  if ($('#row1 .x').length === 3 || $('#row2 .x').length === 3 || $('#row3 .x').length === 3) {
+    xWin();
+  } else if ($('#row1 .o').length === 3 || $('#row2 .o').length === 3 || $('#row3 .o').length === 3) {
+    oWin();
+  } else if ($('.col1.x').length === 3 || $('.col2.x').length === 3 || $('.col3.x').length === 3) {
+    xWin();
+  } else if ($('.col1.o').length === 3 || $('.col2.o').length === 3 || $('.col3.o').length === 3) {
+    oWin();
+  } else if ($('.d1.o').length === 3 || $('.d2.o').length === 3) {
+    oWin();
+  } else if ($('.d1.x').length === 3 || $('.d2.x').length === 3) {
+    xWin();
+  } else if ($(".board td.o, .board td.x").length == $(".board td").length) {
+    $('.winner').text('Cat Game').slideDown();
+    setTimeout(resetBoard, 1000);
+  }
+}
