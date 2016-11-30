@@ -142,17 +142,19 @@ h2 {
   max-height: 80px;
   max-width: 80px;
   margin: 20px auto;
-
 }
 
-.logo i {
+.fa-mobile {
   color: #222;
 }
 
 .fa-html5 {
   color: darkred;
   margin-top: 10px;
+}
 
+.bg-3 h2 {
+  margin-top: -15px;
 }
 
 .bg-4 {
