@@ -138,9 +138,22 @@ h2 {
   margin: 0 auto;
 }
 
-/*.tictactoe {
-  max-height: 400px;
-}*/
+.logo img {
+  max-height: 80px;
+  max-width: 80px;
+  margin: 20px auto;
+
+}
+
+.logo i {
+  color: #222;
+}
+
+.fa-html5 {
+  color: darkred;
+  margin-top: 10px;
+
+}
 
 .bg-4 {
   background-color: #2196F3;
