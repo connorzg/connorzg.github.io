@@ -1,14 +1,6 @@
 $(document).ready(function() {
   $('.board').on('mousedown', 'td', playerClicked);
 
-  var shine = new Shine(document.getElementById('title'));
-  window.addEventListener('mousemove', function(event) {
-    shine.light.position.x = event.clientX;
-    shine.light.position.y = event.clientY;
-    shine.config.opacity = 0.25;
-    shine.draw();
-  }, false);
-
   var didScroll;
   var lastScrollTop = 0;
   var delta = 5;
